@@ -1,19 +1,3 @@
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-# 
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-# 
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-# setup.py
-# Copyright (C) 2018 Fracpete (fracpete at waikato dot ac dot nz)
-
 from setuptools import setup, find_namespace_packages
 
 
@@ -29,7 +13,7 @@ def _read(f) -> bytes:
 
 
 setup(
-    name="wai.bynning",
+    name="wai_bynning",
     description="Python library for binning data, generating cross-validation fold pairs and random splits from data.",
     long_description=(
         _read('DESCRIPTION.rst') + b'\n' +
@@ -46,14 +30,11 @@ setup(
         '': 'src'
     },
     packages=find_namespace_packages(where="src"),
-    namespace_packages=[
-        "wai"
-    ],
-    version="0.0.2",
+    version="0.0.3",
     author='Corey Sterling',
     author_email='coreytsterling@gmail.com',
     install_requires=[
-        "wai.common>=0.0.30"
+        "wai_common"
     ],
     include_package_data=True
 )
